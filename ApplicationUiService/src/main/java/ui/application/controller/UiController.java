@@ -17,4 +17,10 @@ public class UiController {
         model.addAttribute("book", restConnectionService.getBook(1));
         return "welcome";
     }
+
+    @RequestMapping("/getAll")
+    public String getAll(Model model) {
+        model.addAttribute("bookList", restConnectionService.getAllBook());
+        return "welcome";
+    }
 }
